@@ -11,14 +11,19 @@ image2.setAttribute("src",randomDiceImage2);
 
 //changing h1
 var title = document.querySelector("h1");
-if(randomNumber1>randomNumber2){
-    title.innerText="Player 1 wins!";
-}
-else if(randomNumber2>randomNumber1){
-    title.innerText="Player 2 wins!";
-}
-else{
-    title.innerText="Draw!";
-}
+title.innerText = "Loading results!";
+setInterval(() => {
+    if(randomNumber1>randomNumber2){
+        title.innerText="Player 1 wins!";
+    }
+    else if(randomNumber2>randomNumber1){
+        title.innerText="Player 2 wins!";
+    }
+    else{
+        title.innerText="Draw!";
+    }
+}, 500);
+
+
 
 
